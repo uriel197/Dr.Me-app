@@ -1,0 +1,283 @@
+
+    :root {
+        --primary-clr-nav: #2f91fa;
+        --primary-clr-continr: #ddd;
+        --primary-clr-drkmde-continr: #333;
+        --primary-clr-drkmde-contnts: #6e6666;
+        --primary-clr-drkmde-nav: rgb(107, 107, 107);
+        --scndary-clr-bdy: #f4f4f4;
+        --scndary-clr-link: #fff;
+        --scndary-clr-danger: rgb(255, 69, 0);
+
+    }
+    
+    body {
+        font-family: 'Nixie One', sans-serif;
+        background-color: var(--scndary-clr-bdy);
+    }
+
+    *, ::before, ::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    p {
+        line-height: 1.5;
+    }
+
+    h3 {
+        font-family: 'Nixie One', cursive;
+        font-size: larger;
+        margin-bottom: 1rem;
+    }
+
+    .container {
+        position: relative;
+        max-width: 900px;
+        margin: 1rem auto;
+        padding: 1.5rem 1rem;
+        background-color: var(--primary-clr-continr);
+        border-radius: 10px;
+    }
+
+    .openSlide {
+        margin-right: 1rem;
+
+    }
+
+    .burgerLine {
+        background-color: var(--scndary-clr-link);
+        width: 30px;
+        height: 5px;
+        margin: 7px;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+
+    .navBar {
+        display: flex;
+        align-items: center;
+        background-color: var(--primary-clr-nav);
+    }
+
+    .navBar-nav {
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
+        width: 100%;
+    }
+
+    .navBar-nav a {    
+        color: var(--scndary-clr-link);
+        text-decoration: none;
+        text-align: center;
+        display: block;
+        font-size: 1.2rem;
+        width: 100%;
+    }
+
+    .navBar-nav a:hover {
+        color: #ddd;
+    }
+
+    .side-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        align-items: center;
+        height: 100%;
+        width: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        background-color: #111;
+        opacity: 0.9;
+        overflow-x: hidden;
+        padding-top: 60px;
+        transition: 0.3s;
+    }
+
+    .side-nav a {
+        text-decoration: none;
+        color: var(--scndary-clr-link);
+        padding-top: 2rem;
+        font-size: 1.3rem;
+        position: relative;
+    }
+
+    .side-nav a:hover::after {
+        content: "";
+        display: block;
+        margin-top: 5px; /* Adjust this value as needed */
+        width: 100%;
+        height: 2px;
+        background-color: var(--scndary-clr-link);
+        position: absolute;
+        bottom: -12px; /* Adjust this value as needed */
+        left: 0;
+    }
+
+    .btn-close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        margin: 10px;
+        color: var(--scndary-clr-link);
+        cursor: pointer;
+        font-size: 1.3rem;
+    }
+
+    .title {
+        text-align: center;
+        margin: 2rem;
+    }
+
+    .cityInput,
+    .foodsInput {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 1rem;
+    }
+
+    .ailmentWrapper {
+        margin: 1rem;
+        text-align: center;
+    }
+
+    .ailmentItem {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 1.2rem;
+    }
+
+    .checkbox {
+        transform: scale(1.7);
+    }
+
+    .chartBtn,
+    .listBtn {
+        display: block;
+        width: 100%;
+        margin: 3rem 0;
+        padding: 15px 0;
+        color: var(--scndary-clr-link);
+        font-size: large;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .chartBtn {
+        background-color: var(--primary-clr-nav);
+    }
+
+    .chartBtn:hover {
+        color: #ddd;
+    }
+
+    .listBtn {
+        background-color: rgb(175, 94, 72);
+        margin-bottom: 10px;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .tips {
+        font-family: 'Nixie One', cursive;
+        font-weight: 600;
+    }
+
+    .cursive {
+        font-family: 'Mr Dafoe', cursive;
+        font-size: 1.75rem;
+    }
+
+    .contents {
+        max-width: 600px;
+        text-align: center;
+        margin-inline: auto;
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 0.5rem 1.2rem 1.2rem;
+        box-shadow:
+        rgba(50, 50, 93, 0.3) 0px 10px 10px -20px,
+        rgba(0, 0, 0, 0.8) -10px 10px 20px -10px, 
+        rgba(10, 37, 64, 0.35) 3px -3px 6px 2px inset;
+    }
+
+    .drNote {
+        max-width: 600px;
+        text-align: center;
+        margin-inline: auto;
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 0.5rem 1.2rem 1.2rem;
+        box-shadow:
+        rgba(50, 50, 93, 0.3) 0px 10px 10px -20px,
+        rgba(0, 0, 0, 0.8) -10px 10px 20px -10px, 
+        rgba(10, 37, 64, 0.35) 3px -3px 6px 2px inset;
+    }
+
+    .error {
+        background: var(--scndary-clr-danger);
+        border-radius: 5px;
+        border: none;
+        color: #fff;
+        padding: 0.8rem;
+        margin: 0.5rem;
+    }
+
+    .success {
+        background: rgba(48, 177, 78, 0.626);
+        color: #fff;
+        border-radius: 5px;
+        border: none;
+        padding: 0.8rem;
+        margin: 0.5rem;
+    }
+
+    /* Light mode styles */
+    body.light-mode .container {
+        background-color: var(--primary-clr-continr);
+    }
+
+    body.light-mode .contents {
+        background-color: var(--primary-clr-bdy);
+    }
+
+    /* Dark mode styles */
+    body.dark-mode {
+        background-color: var(--primary-clr-drkmde-nav);
+        color: #fff;
+    }
+    body.dark-mode .container {
+        background-color: var(--primary-clr-drkmde-continr); /* Example dark background color */
+    }
+
+    body.dark-mode .contents {
+        background-color: var(--primary-clr-drkmde-contnts); /* Example dark background color */
+        color: white; /* Set text color for dark mode */
+    }
+
+    body.dark-mode .contents h2 {
+        color: var(--primary-clr-drkmde-continr);
+    }
+
+    body.dark-mode .navBar {
+        background-color: var(--primary-clr-drkmde-nav);
+    }
+
+    @media(max-width: 600px) {
+        .navBar-nav {
+            display: none;
+        }
+    }
+  

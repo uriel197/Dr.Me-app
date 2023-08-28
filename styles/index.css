@@ -1,0 +1,114 @@
+
+:root {
+    --primary-clr-nav: #2f91fa;
+    --primary-clr-continr: #ddd;
+    --primary-clr-drkmde-continr: #333;
+    --primary-clr-drkmde-contnts: #6e6666;
+    --primary-clr-drkmde-nav: rgb(107, 107, 107);
+    --scndary-clr-bdy: #f4f4f4;
+    --scndary-clr-link: #fff;
+    --scndary-clr-danger: rgb(255, 69, 0);
+
+}
+
+body {
+    font-family: 'Nixie One', cursive;
+  }
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-family: 'Nixie One', cursive;
+    line-height: 1.5;
+}
+
+h2 {
+    font-family: 'Nixie One', cursive;
+    font-size: larger;
+    color: var(--primary-clr-nav);
+    margin: 2.5rem 0 .8rem ;
+}
+
+.container {
+    max-width: 800px;
+    margin: 1rem auto;
+    padding: 1rem 1.25rem 3rem;
+    background-color: var(--primary-clr-continr);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper {
+    background-color: var(--scndary-clr-bdy);
+    border-radius: 7px;
+    padding: 1.2rem;
+}
+
+.title {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--primary-clr-nav);
+    color: #fff;
+    margin: 1rem 0 2rem;
+}
+
+.foodExample {
+    display: inline-block;
+    border: 2px solid black;
+    background-color: #fff;
+    color: black;
+    padding: 0.8rem;
+    margin: 0.5rem;
+}
+
+.btn-back {
+    margin-top: 2rem;
+}
+
+.btn-back a {
+    color: #fff;
+    font-weight: 600;
+    background-color: var(--primary-clr-nav);
+    display: block;
+    padding: 0.6rem 1rem;
+    border-radius: 7px;
+    text-decoration: none;
+    text-align: center;
+    font-size: larger;
+}
+
+.btn-back a:hover {
+    background-color: var(--primary-clr-continr);
+    color: var(--primary-clr-nav);
+}
+
+/* Light mode styles */
+body.light-mode .container {
+    background-color: var(--primary-clr-continr);
+}
+
+body.light-mode .wrapper {
+    background-color: #fff;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: var(--primary-clr-drkmde-nav);
+    color: #fff;
+}
+body.dark-mode .container {
+    background-color: #333;
+}
+
+body.dark-mode .wrapper {
+    background-color: var(--primary-clr-drkmde-continr); 
+    color: white; /* Set text color for dark mode */
+}
+
+body.dark-mode .title {
+    background-color: var(--primary-clr-drkmde-nav);
+}

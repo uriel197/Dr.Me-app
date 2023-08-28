@@ -1,0 +1,141 @@
+    
+    :root {
+        --primary-clr-nav: #2f91fa;
+        --primary-clr-continr: #ddd;
+        --primary-clr-drkmde-continr: #333;
+        --primary-clr-drkmde-contnts: #7e7c7c2f;
+        --primary-clr-drkmde-nav: rgb(107, 107, 107);
+        --scndary-clr-bdy: #f4f4f4;
+        --scndary-clr-link: #fff;
+        --scndary-clr-danger: rgb(255, 69, 0);
+        --btn-rail-clr: #7cb8f8;
+        --rail-btn-clr: darkgray;
+
+    }
+    
+    body {
+        font-family: 'Nixie One', cursive;
+    }
+    
+    *, ::before, ::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 1rem auto 2rem;
+        padding: 1rem 1.3rem 2rem;
+        background-color: #ddd;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .wrapper {
+        background-color: var(--scndary-clr-bdy);
+        border-radius: 7px;
+        padding: 1.2rem;
+    }
+
+    .title {
+        text-align: center;
+        padding: 1.5rem;
+        background-color: var(--primary-clr-nav);
+        color: #fff;
+        margin: 1rem 0 2rem;
+    }
+
+    .flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .button-text {
+        color: var(--primary-clr-nav);
+    }
+
+    .btn-rail {
+        position: relative;
+        background-color: var(--btn-rail-clr);
+        height: 30px;
+        width: 60px;
+        border-radius: 30px;
+        margin: 2rem;
+    }
+
+    .rail-btn {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: var(--rail-btn-clr);
+        height: 30px;
+        width: 30px;
+        border-radius: 100%;
+        transition: transform 0.3s ease;
+    
+    }
+
+    .btn-on {
+        transform: translateX(30px);
+        background-color: var(--primary-clr-continr);
+    }
+
+    .btn-off {
+        transform: translateX(-30px);
+    }
+
+    .rail-on {
+        background-color: var(--primary-clr-nav);
+    }
+
+    .btn-back {
+        width: 80%;
+        max-width: 600px;
+        margin-inline: auto;
+        margin-top: 1rem;
+        text-align: center;
+    }
+
+    .btn-back a {
+        font-weight: 600;
+        text-decoration: none;
+        display: block;
+        font-size: larger;
+        background-color: var(--primary-clr-nav);
+        color: #fff;
+        padding: 0.6rem 1rem;
+        border-radius: 7px;
+    }
+
+    .btn-back a:hover {
+        background-color: var(--primary-clr-continr);
+        color: #2f91fa;
+    }
+
+    /* Light mode styles */
+    body.light-mode .container {
+        background-color: var(--primary-clr-continr);
+    }
+
+    body.light-mode .wrapper {
+        background-color: var(--scndary-clr-bdy);
+    }
+
+    /* Dark mode styles */
+    body.dark-mode {
+        background-color: var(--primary-clr-drkmde-nav);
+    }
+    body.dark-mode .container {
+        background-color: var(--primary-clr-drkmde-continr); /* Example dark background color */
+    }
+
+    body.dark-mode .wrapper {
+        background-color: var(--primary-clr-drkmde-contnts); /* Example dark background color */
+        color: white; /* Set text color for dark mode */
+    }
+
+    body.dark-mode .title {
+        background-color: var(--primary-clr-drkmde-nav);
+    }

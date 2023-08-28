@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Diagnose - Food Checker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mr+Dafoe&family=Nixie+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navBar">
+            <span class="openSlide">
+                <div id="burgerWrap" tabindex="0" role="button" aria-label="Open Navigation Menu" onclick="openSlideMenu()">
+                    <p class="burgerLine"></p>
+                    <p class="burgerLine"></p>
+                    <p class="burgerLine"></p>
+                </div>
+            </span>
+
+            <ul class="navBar-nav">
+                <a href="index.html">Quick Guide</a>
+                <a href="main.html">Main App</a>
+                <a href="#">Contact</a>
+                <a href="settings.html">Settings</a>
+            </ul>
+        </nav>
+        <div id="side-menu" class="side-nav">
+            <div class="btn-close" tabindex="1" role="button" aria-label="Close Navigation Menu" onclick="closeSlideMenu()">X</div>
+            <a href="index.html" tabindex="-1">Quick Guide</a>
+            <a href="main.html" tabindex="-1">Main App</a>
+            <a href="#" tabindex="-1">Contact</a>
+            <a href="settings.html" tabindex="-1">Settings</a>
+        </div>
+        <h1 class="title">Welcome to your own Clinic</h1>
+        <input type="text" class="cityInput" placeholder="Enter city name">
+        <input type="text" class="foodsInput" placeholder="Enter foods">
+        <div class="ailmentWrapper">
+            <label for="ailmentInput" class="ailmentItem">Are you feeling any discomfort today?</label>
+            <input type="checkbox" checked=""class="checkbox" name="issues">
+        </div>
+        <button class="chartBtn">Get Chart</button>
+        <button class="listBtn hidden">View Diagnose</button>
+        <div class="contents">
+            <h2 class="title" style="color: rgb(255, 69, 0);">Important tip!</h2>
+            <p><span class="tips"></span></p>
+        </div>
+        <div class="drNote hidden" id="doctorsNote">
+            <h2 class="title">If your discomfort is caused by food ingestion:</h2>
+            <p class="cursive cursive1"></p>
+            <h2 class="title">If your discomfort is caused by climate conditions:</h2>
+            <p class="cursive cursive2"></p>
+        </div>
+    </div>
+    
+    <script src="/js files/shared.js"></script>
+    <script src="/js files/main.js"></script>
+</body>
+</html>
