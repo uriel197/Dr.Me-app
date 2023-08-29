@@ -271,8 +271,8 @@
         color: var(--primary-clr-drkmde-continr);
     }
 
-    body.dark-mode .navBar {
-        background-color: var(--primary-clr-drkmde-nav);
+    body.dark-mode .burgerLine {
+        background-color: var(--primary-clr-continr);
     }
 
     @media(max-width: 600px) {
