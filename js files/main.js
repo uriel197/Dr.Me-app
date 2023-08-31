@@ -128,16 +128,16 @@ function addDataToStorage(data) {
     info.push({
         ...data,
         temperatureRange: {
-            'experienced discomfort': 0,
-            'no discomfort': 0,
+            discomfort: 0,
+            noDiscomfort: 0,
         },
         humidityRange: {
-            'experienced discomfort': 0,
-            'no discomfort': 0,
+            discomfort: 0,
+            noDiscomfort: 0,
         },
         pressureRange: {
-            'experienced discomfort': 0,
-            'no discomfort': 0,
+            discomfort: 0,
+            noDiscomfort: 0,
         },
     });
     localStorage.setItem('info', JSON.stringify(info));
@@ -215,23 +215,23 @@ function tableForTemperatureAndHumidity(info) {
         if (!table[key]) {  /* table[key] is the key above */
             table[key] = {
                 humidityRange: {
-                    'experienced discomfort': 0,
-                    'no discomfort': 0,
+                    discomfort: 0,
+                    noDiscomfort: 0,
                 },
                 temperatureRange: {
-                    'experienced discomfort': 0,
-                    'no discomfort': 0,
+                    discomfort: 0,
+                    noDiscomfort: 0,
                 },
                 pressureRange: {
-                    'experienced discomfort': 0,
-                    'no discomfort': 0,
+                    discomfort: 0,
+                    noDiscomfort: 0,
                 },
             };
         }
 
-        table[key].humidityRange[entry.ailment ? 'experienced discomfort' : 'no discomfort'] += 1;
-        table[key].temperatureRange[entry.ailment ? 'experienced discomfort' : 'no discomfort'] += 1;
-        table[key].pressureRange[entry.ailment ? 'experienced discomfort' : 'no discomfort'] += 1;
+        table[key].humidityRange[entry.ailment ? 'discomfort' : 'noDiscomfort'] += 1;
+        table[key].temperatureRange[entry.ailment ? 'discomfort' : 'noDiscomfort'] += 1;
+        table[key].pressureRange[entry.ailment ? 'discomfort' : 'noDiscomfort'] += 1;
     }
 
     return table;
