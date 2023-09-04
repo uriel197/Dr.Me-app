@@ -1,7 +1,7 @@
 const weatherInfo = document.querySelector('.contents'); 
 const cityName = document.querySelector('.cityInput');
 const ailmentCheckbox = document.querySelector('.checkbox');
-const apiKey = '';
+const apiKey = 'YOUR_API_KEY';
 
 const contentTips = [
 ["Be consistent in your naming of foods, for example: if you eat french fries one day, don't call it fries, instead, call it potatoes so that if another day you eat potatoes then the App will count them both when making the diagnose."], ["to help our App make a better diagnose, try to go to places with different climate conditions in order to test all options."], ["if you happen to be traveling outside of your city, don't forget to enter the name of the city you were in most of the day and not the city where you live."],
