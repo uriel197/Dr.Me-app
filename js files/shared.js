@@ -1,19 +1,21 @@
         // shared.js
         const body = document.body;
+        const darkModeToggle = document.getElementById('buttonText');
 
         function toggleDarkMode() {
-            body.classList.toggle('dark-mode');
-            setUserPreference(body.classList.contains('dark-mode') ? 'dark' : 'light');  /* 1 */
+            body.classList.toggle('dark-mode');  /* 1 */
+            setUserPreference('color-mode', body.classList.contains('dark-mode') ? 'dark' : 'light');
+            setUserPreference('color-mode-text', body.classList.contains('dark-mode') ? 'Light Mode' : 'Dark Mode');
         }
 
-        // Function to set user preference
-        function setUserPreference(mode) {
-            localStorage.setItem('color-mode', mode); // Store in local storage
+        // Function to set user's preference
+        function setUserPreference(keyName, mode) {
+            localStorage.setItem(keyName, mode); // Store in local storage
         }
         
-        // Function to get user preference
-        function getUserPreference() {
-            return localStorage.getItem('color-mode'); // Retrieve from local storage
+        // Function to get user's preference
+        function getUserPreference(keyName) {
+            return localStorage.getItem(keyName); // Retrieve from local storage
         }
         
         // Function to apply color mode based on user preference
@@ -22,7 +24,11 @@
                 if (userPreference === 'dark') {
                     body.classList.add('dark-mode');
                 }
-        }        
+                const colorModeText = getUserPreference('color-mode-text'); 
+                if(colorModeText !== null) {
+                    darkModeToggle.innerText = colorModeText;
+                }
+            }        
         
 // Apply color mode on page load
 applyColorMode();
