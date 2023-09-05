@@ -1,7 +1,6 @@
 
 const rails = document.querySelectorAll('.btn-rail');
 const buttons = document.querySelectorAll('.rail-btn');
-const darkModeToggle = document.getElementById('buttonText');
 
 function buttonToggle(button, rail) {
     button.classList.toggle('btn-on'); // Toggle between on and off classes
