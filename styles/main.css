@@ -7,8 +7,8 @@
         --primary-clr-drkmde-nav: rgb(107, 107, 107);
         --scndary-clr-bdy: #f4f4f4;
         --scndary-clr-link: #fff;
-        --scndary-clr-danger: rgb(255, 69, 0);
-
+        --scndary-clr-danger: #b14c27;
+        --rail-btn-clr: darkgray;
     }
     
     body {
@@ -34,7 +34,7 @@
 
     .container {
         position: relative;
-        max-width: 900px;
+        max-width: 56.25rem;
         margin: 1rem auto;
         padding: 1.5rem 1rem;
         background-color: var(--primary-clr-continr);
@@ -78,7 +78,7 @@
     }
 
     .navBar-nav a:hover {
-        background-color: rgba(47, 145, 250, 0.9);
+        background-color: rgba(101, 171, 247);
     }
 
     .side-nav {
@@ -95,7 +95,7 @@
         background-color: #111;
         opacity: 0.9;
         overflow-x: hidden;
-        padding-top: 60px;
+        padding-top: 3.75rem;
         transition: 0.3s;
     }
 
@@ -129,7 +129,8 @@
         font-size: 1.3rem;
     }
 
-    .title {
+    .title { 
+        color: var(--scndary-clr-danger);
         text-align: center;
         margin: 2rem;
     }
@@ -137,8 +138,8 @@
     .cityInput,
     .foodsInput {
         width: 100%;
-        padding: 10px;
-        margin: 10px 0;
+        padding: 0.625rem;
+        margin: 0.625rem 0;
         border: 1px solid #ccc;
         border-radius: 5px;
         font-size: 1rem;
@@ -151,7 +152,7 @@
 
     .ailmentItem {
         display: block;
-        margin-bottom: 10px;
+        margin-bottom: 0.625rem;
         font-size: 1.2rem;
     }
 
@@ -164,13 +165,13 @@
         display: block;
         width: 100%;
         margin: 3rem 0;
-        padding: 15px 0;
+        padding: 0.9375rem 0;
         color: var(--scndary-clr-link);
         font-size: large;
         border: none;
-        border-radius: 5px;
+        border-radius: 7px;
         cursor: pointer;
-        transition: background-color 0.3s ease;
+        transition: background-color 0.2s ease;
     }
 
     .chartBtn {
@@ -178,12 +179,12 @@
     }
 
     .chartBtn:hover {
-        color: #ddd;
+        background-color: rgba(101, 171, 247);
     }
 
     .listBtn {
         background-color: rgb(175, 94, 72);
-        margin-bottom: 10px;
+        margin-bottom: 0.625rem;
     }
 
     .hidden {
@@ -201,7 +202,7 @@
     }
 
     .contents {
-        max-width: 600px;
+        max-width: 37.5rem;
         text-align: center;
         margin-inline: auto;
         background-color: #fff;
@@ -214,7 +215,7 @@
     }
 
     .drNote {
-        max-width: 600px;
+        max-width: 37.5rem;
         text-align: center;
         margin-inline: auto;
         background-color: #fff;
@@ -263,16 +264,36 @@
     }
 
     body.dark-mode .contents {
-        background-color: var(--primary-clr-drkmde-contnts); /* Example dark background color */
-        color: white; /* Set text color for dark mode */
-    }
-
-    body.dark-mode .contents h2 {
-        color: var(--primary-clr-drkmde-continr);
+        background-color: var(--primary-clr-continr); /* Example dark background color */
+        color: var(--primary-clr-drkmde-contnts); /* Set text color for dark mode */
     }
 
     body.dark-mode .burgerLine {
         background-color: var(--primary-clr-continr);
+    }
+
+    body.dark-mode .navBar-nav a {    
+        color: var(--scndary-clr-link);
+        background-color: var(--primary-clr-drkmde-contnts);
+    }
+
+    body.dark-mode .navBar-nav a:hover {    
+        color: var(--scndary-clr-link);
+        background-color: var(--rail-btn-clr);
+    }
+
+    body.dark-mode .chartBtn {
+        background-color: var(--rail-btn-clr);
+        color: var(--scndary-clr-bdy);
+    }
+
+    body.dark-mode .chartBtn:hover {
+        background-color: var(--primary-clr-continr);
+        color: var(--rail-btn-clr);
+    }
+
+    body.dark-mode .title {
+        color: #b14c27;
     }
 
     @media(max-width: 600px) {
