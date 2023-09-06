@@ -1,4 +1,4 @@
-
+'use strict';
 const rails = document.querySelectorAll('.btn-rail');
 const buttons = document.querySelectorAll('.rail-btn');
 
@@ -13,10 +13,10 @@ buttons.forEach((button, index) => {
         const rail = rails[index];
         buttonToggle(button, rail); 
         if(index === 0) {    
-            if (darkModeToggle.innerText === 'Dark Mode') {
-                darkModeToggle.innerText = 'Light Mode';
+            if (retrieveFromLocalStorage.textContent === 'Dark Mode') {
+                retrieveFromLocalStorage.textContent = 'Light Mode';
             } else {
-                darkModeToggle.innerText = 'Dark Mode';
+                retrieveFromLocalStorage.textContent = 'Dark Mode';
             }
             toggleDarkMode();
         }             
@@ -24,17 +24,18 @@ buttons.forEach((button, index) => {
 });
 
 buttons.forEach((button, index) => {
-    button.addEventListener('keydown', function(e) {
-        if(e.key === 'Enter' && index === 0) {   
-            if (darkModeToggle.innerText === 'Dark Mode') {
-                darkModeToggle.innerText = 'Light Mode';
+    button.addEventListener('keydown', (e) => {
+        if(e.key === 'Enter' && index === 0) { 
+            if (retrieveFromLocalStorage.textContent === 'Dark Mode') {
+                retrieveFromLocalStorage.textContent = 'Light Mode';
             } else {
-                darkModeToggle.innerText = 'Dark Mode';
+                retrieveFromLocalStorage.textContent = 'Dark Mode';
             }
             toggleDarkMode();
         }
     })
-})
+})       
+
 
 const fontSizeButton = document.getElementById('fontSizeButton');
 const root = document.documentElement; // Get the <html> element
