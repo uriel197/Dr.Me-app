@@ -116,6 +116,10 @@ body.dark-mode .title {
     color: var(--scndary-clr-danger);
 }
 
+body.dark-mode .disclaimerTitle {
+    color: var(--scndary-clr-danger);
+}
+
 body.dark-mode .foodExample {    
     background-color: var(--rail-btn-clr);
     color: var(--primary-clr-drkmde-continr);
