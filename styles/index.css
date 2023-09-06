@@ -8,7 +8,7 @@
     --scndary-clr-bdy: #f4f4f4;
     --scndary-clr-link: #fff;
     --scndary-clr-danger: rgb(255, 69, 0);
-
+    --rail-btn-clr: darkgray;
 }
 
 body {
@@ -22,19 +22,16 @@ body {
 }
 
 p {
-    font-family: 'Nixie One', cursive;
     line-height: 1.5;
 }
 
 h2 {
-    font-family: 'Nixie One', cursive;
-    font-size: larger;
     color: var(--primary-clr-nav);
     margin: 2.5rem 0 .8rem ;
 }
 
 .container {
-    max-width: 800px;
+    max-width: 50rem;
     margin: 1rem auto;
     padding: 1rem 1.25rem 3rem;
     background-color: var(--primary-clr-continr);
@@ -58,32 +55,37 @@ h2 {
 
 .foodExample {
     display: inline-block;
-    border: 2px solid black;
-    background-color: #fff;
-    color: black;
+    border-radius: 7px;
+    background-color: var(--primary-clr-continr);
+    color: var(--rail-btn-clr);
+    font-weight: 600;
     padding: 0.8rem;
     margin: 0.5rem;
 }
 
+.disclaimerTitle {
+    color: var(--scndary-clr-danger);
+}
+
 .btn-back {
+    background-color: var(--primary-clr-nav);
     margin-top: 2rem;
+    border-radius: 7px;
 }
 
 .btn-back a {
-    color: #fff;
+    color: var(--primary-clr-continr);
     font-weight: 600;
-    background-color: var(--primary-clr-nav);
     display: block;
     padding: 0.6rem 1rem;
-    border-radius: 7px;
     text-decoration: none;
     text-align: center;
-    font-size: larger;
 }
 
 .btn-back a:hover {
     background-color: var(--primary-clr-continr);
     color: var(--primary-clr-nav);
+    border-radius: 7px;
 }
 
 /* Light mode styles */
@@ -110,5 +112,23 @@ body.dark-mode .wrapper {
 }
 
 body.dark-mode .title {
-    background-color: var(--primary-clr-drkmde-nav);
+    background-color: var(--rail-btn-clr);
+    color: var(--scndary-clr-danger);
+}
+
+body.dark-mode .foodExample {    
+    background-color: var(--rail-btn-clr);
+    color: var(--primary-clr-drkmde-continr);
+}
+
+body.dark-mode .btn-back {
+    background-color: var(--rail-btn-clr);
+}
+
+body.dark-mode .btn-back a {
+    color: var(--scndary-clr-bdy);
+}
+
+body.dark-mode .btn-back a:hover {
+    color: var(--rail-btn-clr);
 }
