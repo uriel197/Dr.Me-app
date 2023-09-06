@@ -1,6 +1,7 @@
         // shared.js
+        'use strict';
         const body = document.body;
-        const darkModeToggle = document.getElementById('buttonText');
+        const colorModeText = document.getElementById('buttonText');
 
         function toggleDarkMode() {
             body.classList.toggle('dark-mode');  /* 1 */
@@ -24,10 +25,11 @@
                 if (userPreference === 'dark') {
                     body.classList.add('dark-mode');
                 }
-                const colorModeText = getUserPreference('color-mode-text'); 
-                if(colorModeText !== null) {
-                    darkModeToggle.innerText = colorModeText;
-                }
+                const retrieveFromLocalStorage = getUserPreference('color-mode-text'); 
+                if(!darkModelToggle) {
+                    return;
+                } else {
+                    colorModeText.textContent = retrieveFromLocalStorage;    
             }        
         
 // Apply color mode on page load
