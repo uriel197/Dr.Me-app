@@ -24,7 +24,7 @@
     }
 
     .container {
-        max-width: 800px;
+        max-width: 50rem;
         margin: 1rem auto 2rem;
         padding: 1rem 1.3rem 2rem;
         background-color: #ddd;
@@ -53,15 +53,15 @@
     }
 
     .button-text {
-        color: var(--primary-clr-nav);
+        color: var(--scndary-clr-danger);
     }
 
     .btn-rail {
         position: relative;
-        background-color: var(--btn-rail-clr);
-        height: 30px;
-        width: 60px;
-        border-radius: 30px;
+        background-color: var(--primary-clr-nav);
+        height: 1.875rem;
+        width: 3.75rem;
+        border-radius: 1.875rem;
         margin: 2rem;
     }
 
@@ -69,21 +69,17 @@
         position: absolute;
         top: 0;
         left: 0;
-        background-color: var(--rail-btn-clr);
-        height: 30px;
-        width: 30px;
+        background-color: var(--primary-clr-continr);
+        height: 1.875rem;
+        width: 1.875rem;
         border-radius: 100%;
         transition: transform 0.3s ease;
     
     }
 
     .btn-on {
-        transform: translateX(30px);
+        transform: translateX(1.875rem);
         background-color: var(--primary-clr-continr);
-    }
-
-    .btn-off {
-        transform: translateX(-30px);
     }
 
     .rail-on {
@@ -91,9 +87,11 @@
     }
 
     .btn-back {
+        background-color: var(--primary-clr-nav);
         width: 80%;
-        max-width: 600px;
+        max-width: 37.5rem;
         margin-inline: auto;
+        border-radius: 7px;
         margin-top: 1rem;
         text-align: center;
     }
@@ -103,8 +101,7 @@
         text-decoration: none;
         display: block;
         font-size: larger;
-        background-color: var(--primary-clr-nav);
-        color: #fff;
+        color: var(--primary-clr-continr);
         padding: 0.6rem 1rem;
         border-radius: 7px;
     }
@@ -115,13 +112,13 @@
     }
 
     /* Light mode styles */
-    body.light-mode .container {
+    /* body.light-mode .container {
         background-color: var(--primary-clr-continr);
     }
 
     body.light-mode .wrapper {
         background-color: var(--scndary-clr-bdy);
-    }
+    } */
 
     /* Dark mode styles */
     body.dark-mode {
@@ -138,4 +135,28 @@
 
     body.dark-mode .title {
         background-color: var(--primary-clr-drkmde-nav);
+    }
+
+    body.dark-mode .button-text {
+        color: var(--scndary-clr-danger);
+    }
+
+    body.dark-mode .rail-btn {
+        color: var(--scndary-clr-bdy);
+    }
+
+    body.dark-mode .btn-rail {
+        background-color: black;
+    }
+
+    body.dark-mode .btn-back {
+        background-color: var(--rail-btn-clr);
+    }
+    
+    body.dark-mode .btn-back a {
+        color: var(--scndary-clr-bdy);
+    }
+    
+    body.dark-mode .btn-back a:hover {
+        color: var(--rail-btn-clr);
     }
