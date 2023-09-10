@@ -3,12 +3,6 @@
         const body = document.body;
         const retrieveFromLocalStorage = document.getElementById('buttonText');
 
-        function toggleDarkMode() {
-            body.classList.toggle('dark-mode');  /* 1 */
-            setUserPreference('color-mode', body.classList.contains('dark-mode') ? 'dark' : 'light');
-            setUserPreference('color-mode-text', body.classList.contains('dark-mode') ? 'Light Mode' : 'Dark Mode');
-        }
-
         // Function to set user preference
         function setUserPreference(keyName, mode) {
             localStorage.setItem(keyName, mode);
