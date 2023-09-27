@@ -1,6 +1,6 @@
 
 # Dr.Me App
-Welcome to the Dr.Me app GitHub repository! This app is designed to help users track their discomfort symptoms related to specific foods and climate conditions. After 21 days of collecting user data, the app provides a diagnosis that suggests potential connections between discomfort and environmental factors.
+Welcome to the Dr.Me app GitHub repository! This app is designed to help users track their discomfort symptoms related to specific foods and climate conditions. The site requests data from openweathermap.org and after 21 days of collecting user data, the app provides a diagnosis that suggests potential connections between discomfort and environmental factors.
 
 ## Inspiration
 The Dr.Me app was inspired by an exercise from the renowned book "Eloquent JavaScript" by Marijn Haverbeke. Specifically, it draws inspiration from the book's exercises on data collection, analysis, and correlation found in the "squirrel man" exercise. I have adapted and expanded upon these concepts to create a practical tool that empowers users to gain insights into their discomfort symptoms and make informed lifestyle choices.
